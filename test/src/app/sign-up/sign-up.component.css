@@ -1,0 +1,168 @@
+.main-con {
+  width: 1500px;
+  margin: 0px auto;
+  /*background-color: #ddd*/
+}
+
+p {
+  font-family: Lato;
+}
+
+.title {
+  text-align: center;
+  padding: 20px;
+}
+
+.card {
+  background-color: #fff;
+  width: 30%;
+  margin: auto;
+  margin-top: 10%;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: .5rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.text-muted {
+  color: red !important;
+}
+
+.form-text {
+  display: block;
+  margin-top: .25rem;
+}
+
+.small, small {
+  font-size: 80%;
+  font-weight: 400;
+}
+
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+}
+
+.btn-primary.focus, .btn-primary:focus {
+  box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 50%);
+}
+
+.btn:focus, .btn:hover {
+  text-decoration: none;
+}
+
+.btn.disabled, .btn:disabled {
+  opacity: .65;
+}
+
+.btn.focus, .btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+button, input {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+input.ng-touched.ng-invalid {
+  border: 1px solid red;
+}
+
+.login {
+  text-align: center;
+  padding-left: 40%;
+  padding-top: 100px;
+  font-weight: bold;
+}
+
+a {
+  color: blue;
+  cursor: pointer;
+}
+
+.sign-btn {
+  width: 100%;
+  margin-left: 80%;
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+  .card {
+    background-color: #fff;
+    width: 50%;
+    margin: auto;
+    margin-top: 10%;
+
+  }
+}

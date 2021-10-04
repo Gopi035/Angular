@@ -1,0 +1,66 @@
+<div class="container">
+  <div>
+    <p>
+
+      <mat-toolbar>
+        <span>My Application</span>
+      </mat-toolbar>
+
+    </p>
+  </div>
+  <div style="width: 100%">
+    <div class="cat-buy">
+      <form>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Category</mat-label>
+          <mat-select [(ngModel)]="selectedValue" name="food">
+            <mat-option *ngFor="let food of category" [value]="food">
+              {{food}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+      </form>
+      <span>{{selectedValue}}</span>
+      <div style="width: 200px">
+        <button mat-stroked-button (click)="openDialog()">Buy Now</button>
+      </div>
+
+    </div>
+    <div style="display: flex;flex-direction: column;">
+      <div class="product" *ngFor="let item of product | myfilter : selectedValue">
+
+
+        <mat-card>
+          <div style="width: 100%">
+            <div>
+              <h2>{{item.p_name}}</h2>
+            </div>
+            <div class="image">
+              <img class="img-3 img-4" width="150" height="150" src="{{item.img}}">
+            </div>
+            <div>
+              <span class="text">Price:</span>
+              <span>{{item.p_cost}}</span>
+            </div>
+            <div>
+              <span class="text">Detilas:</span><span>{{item.p_details}}</span>
+
+            </div>
+            <div>
+              <span>Qty : </span>
+              <input class="inputtext crt_mat_input" type="number"
+                     value="{{item.p_availability}}" [ngModel]="item.p_availability">
+
+            </div>
+          </div>
+
+        </mat-card>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>

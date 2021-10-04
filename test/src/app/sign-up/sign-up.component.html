@@ -1,0 +1,138 @@
+<!-- this user sign up form -->
+<div class="main-con">
+  <mat-card class="card">
+    <mat-card-title class="title">Sign Up Form</mat-card-title>
+
+    <div class="container">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit();">
+
+        <div class="form-group">
+          <label>First Name:</label>
+          <span style="display: flex">
+          <input type="name" class="form-control" formControlName="firstname" placeholder="Enter Your First Name"
+                 autocomplete="on" appAlphabetOnly>
+          <span style="float: right">
+              <mat-icon #tooltip="matTooltip" matTooltip="Only Alphabets Allowed"
+                        matTooltipPosition="right">info</mat-icon>
+          </span>
+          </span>
+          <small class="form-text text-muted"
+                 *ngIf="loginForm.controls.firstname.touched && loginForm.controls.firstname.errors?.required">
+            Please Enter Your First Name!
+          </small>
+
+
+        </div>
+        <div class="form-group">
+          <label>Last Name: </label>
+          <span style="display: flex">
+          <input type="text" class="form-control" formControlName="lastname" placeholder="Enter Your Last Name"
+                 autocomplete="on" appAlphabetOnly>
+            <span style="float: right">
+              <mat-icon #tooltip="matTooltip" matTooltip="Only Alphabets Allowed"
+                        matTooltipPosition="right">info</mat-icon>
+          </span>
+          </span>
+          <small class="form-text text-muted"
+                 *ngIf="loginForm.controls.lastname.touched && loginForm.controls.lastname.errors?.required">
+            Please Enter Your Last Name!
+          </small>
+        </div>
+        <div class="form-group">
+          <label>Email Address:</label>
+          <span style="display: flex">
+          <input type="email" class="form-control" formControlName="email" placeholder="Enter Your Email"
+                 autocomplete="on">
+            <span style="float: right">
+              <mat-icon #tooltip="matTooltip" matTooltip="Email must character and number and @ and gmail.com "
+                        matTooltipPosition="right">info</mat-icon>
+          </span>
+          </span>
+          <small class="form-text text-muted">{{msg}}</small>
+          <small class="form-text text-muted"
+                 *ngIf="loginForm.controls.email.touched && loginForm.controls.email.errors?.required">
+            Please enter email address.!
+          </small>
+
+          <small class="form-text text-muted"
+                 *ngIf="loginForm.controls.email.touched && loginForm.controls.email.errors?.email">
+            Email address not well formed.!
+          </small>
+        </div>
+
+        <div class="form-group">
+          <label>Enter Your Number:</label>
+          <span style="display: flex">
+          <input type="text" class="form-control" formControlName="number" placeholder="+91  Enter Your Number"
+                 autocomplete="on">
+            <span style="float: right">
+              <mat-icon #tooltip="matTooltip"
+                        matTooltip="Number Must + is there 13 digits are allowed. 13 digits is excluding + symbol \n  Should not start with 0 \n + is not there only 10 digits allowed  "
+                        matTooltipPosition="right">info</mat-icon>
+          </span>
+          </span>
+          <small class="form-text text-muted"
+                 *ngIf="loginForm.controls.number.touched && loginForm.controls.number.errors?.required">
+            Please Enter Your Number!
+          </small>
+          <small class="form-text text-muted" *ngIf="loginForm.controls.number.hasError('pattern')"> If + is there, 13
+            digits are allowed. 13 digits is excluding + symbol.<br> Should not start with 0
+          </small>
+
+        </div>
+        <div class="form-group">
+          <label> Password:</label>
+          <span style="display: flex">
+            <!--<span>-->
+          <input type="password" class="form-control" formControlName="password" placeholder="Password"
+                 autocomplete="on" name="password">
+
+            <span style=" float: right">
+              <mat-icon #tooltip="matTooltip"
+                        matTooltip="Password Must be Min length - 6 \n Should contain atleast one alphabet, one number, one char among @#$&! "
+                        matTooltipPosition="right">info</mat-icon>
+          </span>
+          </span>
+          <small class="form-text text-muted"
+                 *ngIf="loginForm.controls.password.touched && loginForm.controls.password.errors?.required">
+            Please Enter Your Password!
+          </small>
+          <small class="form-text text-muted" *ngIf="loginForm.controls.password.errors?.minlength"> Minimum Length 6
+          </small>
+          <small class="form-text text-muted" *ngIf="loginForm.controls.password.hasError('pattern')"> Should contain
+            atleast one alphabet, one number, one char among @#$&!
+
+          </small>
+        </div>
+        <div class="form-group">
+          <label>Confirm Password:</label>
+          <span style="display: flex">
+          <input type="password" class="form-control" formControlName="confirmpassword" placeholder="Confirm Password"
+                 autocomplete="on" name="confirmpassword">
+
+            <span style="float: right">
+              <mat-icon #tooltip="matTooltip"
+                        matTooltip=" Should match with the Password field"
+                        matTooltipPosition="right">info</mat-icon>
+          </span>
+          </span>
+          <small class="form-text text-muted"
+                 *ngIf="loginForm.controls.confirmpassword.touched && loginForm.controls.confirmpassword.errors?.required">
+            Please Enter Your Conform Password!
+          </small>
+          <small class="form-text text-muted" *ngIf="loginForm.errors?.valuesDoNotMatch">
+            Password Not Match
+          </small>
+        </div>
+
+        <div class="sign-btn">
+
+          <button type="submit" class="btn btn-primary" mat-raised-button [disabled]="!loginForm.valid">
+            Sign Up
+          </button>
+        </div>
+      </form>
+
+    </div>
+  </mat-card>
+</div>

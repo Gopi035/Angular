@@ -1,0 +1,37 @@
+[
+  {
+    "p_name": "Apple",
+    "p_id": 1,
+    "p_cost": 30,
+    "p_availability": 1,
+    "p_details": "Imported from Swiss",
+    "p_category": "Premium",
+    "img": "https://5.imimg.com/data5/LM/DU/MY-22954806/apple-fruit-500x500.jpg"
+  },
+  {
+    "p_name": "Mango",
+    "p_id": 2,
+    "p_cost": 50,
+    "p_availability": 1,
+    "p_details": "Farmed at Selam",
+    "p_category": "Tamilnadu",
+    "img": "http://www.svz.com/wp-content/uploads/2018/05/Mango-1.jpg"
+  },
+  {
+    "p_name": "Bananna",
+    "p_id": 3,
+    "p_cost": 5,
+    "p_availability": 0,
+    "p_category": "other",
+    "img": "https://cdn.mos.cms.futurecdn.net/42E9as7NaTaAi4A6JcuFwG.jpg"
+  },
+  {
+    "p_name": "Orange",
+    "p_id": 4,
+    "p_cost": 25,
+    "p_availability": 1,
+    "p_details": "from Nagpur",
+    "p_category": "Premium",
+    "img": "https://images.jumpseller.com/store/megastore12/5595750/orange-web-1024x768.jpg?0"
+  }
+]
